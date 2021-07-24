@@ -6,7 +6,8 @@ steps:
 - name: dwm-complier
   image: archlinux
   commands:
-    - git clone git@github.com:LiarLee/Liarlee-dwm.git
+    #     - git clone git@github.com:LiarLee/Liarlee-dwm.git
+    - echo Hello
 
 
 trigger:
