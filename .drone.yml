@@ -1,0 +1,14 @@
+kind: pipeline
+type: docker
+name: dwm-complier
+
+steps:
+- name: dwm-complier
+  image: archlinux
+  commands:
+    - git clone git@github.com:LiarLee/Liarlee-dwm.git
+
+
+trigger:
+  event:
+  - push
