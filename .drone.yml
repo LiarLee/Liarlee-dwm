@@ -13,9 +13,6 @@ steps:
     #     - git clone git@github.com:LiarLee/Liarlee-dwm.git
     - echo Hello
 
-
 trigger:
-  branch:
-  - main
   event:
   - push
