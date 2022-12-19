@@ -1,13 +1,13 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappih    = 5;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 5;       /* vert inner gap between windows */
+static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
 static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 5;       /* vert outer gap between windows and screen edge */
-static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
+static const unsigned int gappov    = 10;       /* vert outer gap between windows and screen edge */
+static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;    /* 0: systray in the right corner, >0: systray on left of status text */
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -40,9 +40,9 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Google-chrome",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Slack",    NULL,       NULL,       1 << 7,       0,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "COPYQ",    NULL,       NULL,       0,            1,           -1 },
-	{ "keepass2",    NULL,       NULL,       0,            1,           -1 }
+	{ "screenkey",    NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -73,7 +73,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[] = { "alacritty", NULL };
 static const char *roficmd[] = { "rofi", "-show", "drun" };
-static const char *firefoxcmd[] = { "/opt/google/chrome/chrome", NULL };
+static const char *firefoxcmd[] = { "firefox", NULL };
 static const char *copyqcmd[] = { "copyq", "toggle", NULL };
 static const char *flameshotcmd[] = { "flameshot", "gui", NULL };
 static const char *lightup[] = { "xbacklight", "-inc", "2", NULL };
